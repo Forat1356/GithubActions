@@ -25,5 +25,15 @@ jobs:
    - name: world says hi
      run: echo "You there Nate?"
      shell: bash
+ hello2:
+  runs-on: windows-latest
+  steps:
+   - uses: actions/checkout@v2
+   - name: hello world
+     run: echo "Hellow Nathan"
+     shell: bash
+   - name: world says hi
+     run: echo "You there Nate?"
+     shell: bash
    
  
