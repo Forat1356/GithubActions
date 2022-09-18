@@ -18,22 +18,12 @@ jobs:
  hello:
   runs-on: ubuntu-latest
   steps:
-   - uses: actions/checkout@v2
-   - name: hello world
-     run: echo "Hellow Nathan"
-     shell: bash
-   - name: world says hi
-     run: echo "You there Nate?"
-     shell: bash
- hello2:
-  runs-on: windows-latest
-  steps:
-   - uses: actions/checkout@v2
-   - name: hello world
-     run: echo "Hellow Nathan"
-     shell: bash
-   - name: world says hi
-     run: echo "You there Nate?"
-     shell: bash
-   
+   - name: Terraform installer
+     # You may pin to the exact commit or the version.
+     # uses: autero1/action-terraform@f15724bf9bc1dab3aa86d67002c7133c4ce7f691
+     uses: autero1/action-terraform@v1.0.3
+     with:
+      # Terraform version to install
+      terraform_version: v4.23.0
+     
  
