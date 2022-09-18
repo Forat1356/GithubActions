@@ -22,5 +22,8 @@ jobs:
    - name: hello world
      run: echo "Hellow Nathan"
      shell: bash
+   - name: world says hi
+     run: echo "You there Nate?"
+     shell: bash
    
  
