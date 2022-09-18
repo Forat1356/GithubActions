@@ -26,9 +26,11 @@ jobs:
      with:
       # Version of terraform to download
       version: 4.23.0
-      
    - name: terraform init
      run: terraform init
+     shell: bash
+   - name: terraform plan
+     run: terraform plan -out "plan1.tfplan"
      shell: bash
      
      
