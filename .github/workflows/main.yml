@@ -18,6 +18,7 @@ jobs:
  hello:
   runs-on: ubuntu-latest
   steps:
+   - uses: actions/checkout@v2
    - name: Terraform installer
      # You may pin to the exact commit or the version.
      # uses: autero1/action-terraform@f15724bf9bc1dab3aa86d67002c7133c4ce7f691
