@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: 
  push:
-    branches: [ "tom", "tom" ]
+    branches: [ "tom" ]
  pull_request:
     branches: [ "tom" ]
 jobs:
