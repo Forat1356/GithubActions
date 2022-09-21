@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Moma"
-        if: env.DAY_OF_WEEK == 'lol' 
+        if: env.DAY_OF_WEEK == 'lol222' 
         run: write-host "my 22444444 test is $env:DAY_OF_WEEK"
         
       
