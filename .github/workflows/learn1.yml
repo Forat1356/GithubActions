@@ -4,7 +4,7 @@ on:
   branches: ["tom"]
 env:
   DAY_OF_WEEK: lol
-  secret: ${{secret.secret1}}
+  secret: ${{secrets.secret1}}
 
 jobs:
   greeting_job:
