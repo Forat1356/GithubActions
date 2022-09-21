@@ -6,7 +6,7 @@ env:
   DAY_OF_WEEK: Monday
 jobs:
   Explore-GitHub-Actions:
-    runs-on: uubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: echo " I am Thomas     $DAY_OF_WEEK"
