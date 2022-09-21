@@ -13,8 +13,12 @@ jobs:
       os: [ubuntu-latest, windows-latest]
    runs-on: ${{matrix.os}}
    steps:
-      - name: "Moma"
-        if: env.DAY_OF_WEEK == 'lol' 
-        run: write-host "my 22444444 test is $env:DAY_OF_WEEK"
+      - name: windows
+        if: matrix.os == "windows-latest"
+        run: write-host "my windows 22444444 test is $env:DAY_OF_WEEK"
+      - name: linux
+        if: matrix.os == "ubuntu-latest"
+        run: echo "my linuxxxxxxxxx 22444444 test is $DAY_OF_WEEK"
+        
         
       
