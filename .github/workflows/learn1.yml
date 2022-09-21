@@ -8,10 +8,13 @@ env:
 
 jobs:
   greeting_job:
-    runs-on: windows-latest
-    steps:
+   strategy:
+    matrix:
+      os: [ubuntu-latest, windows-latest]
+   runs-on: ${{matrix.os}}
+   steps:
       - name: "Moma"
-        if: env.DAY_OF_WEEK == 'lol222' 
+        if: env.DAY_OF_WEEK == 'lol' 
         run: write-host "my 22444444 test is $env:DAY_OF_WEEK"
         
       
