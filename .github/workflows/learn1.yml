@@ -3,7 +3,7 @@ on:
  push:
   branches: ["tom"]
 env:
-  DAY_OF_WEEK: lol
+  DAY_OF_WEEK: lol222
   secret: ${{secrets.secret1}}
 
 jobs:
@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: "Moma"
         if: env.DAY_OF_WEEK == 'lol' 
-        run: write-host "my 22444444 test is $DAY_OF_WEEK!"
+        run: write-host "my 22444444 test is $env:DAY_OF_WEEK"
         
       
