@@ -8,10 +8,10 @@ env:
 
 jobs:
   greeting_job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: "Moma"
         if: env.DAY_OF_WEEK == 'lol' 
-        run: echo "my 22 test is $DAY_OF_WEEK!"
+        run: write-host "my 22444444 test is $DAY_OF_WEEK!"
         
       
