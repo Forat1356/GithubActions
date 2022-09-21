@@ -3,14 +3,14 @@ on:
  push:
   branches: ["tom"]
 env:
-  DAY_OF_WEEK:  Monday
+  DAY_OF_WEEK: lol
 
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
     steps:
       - name: "Moma"
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
-        run: echo "my test is $DAY_OF_WEEK!"
+        if: env.DAY_OF_WEEK == 'lol' 
+        run: echo "my 22 test is $DAY_OF_WEEK!"
         
       
