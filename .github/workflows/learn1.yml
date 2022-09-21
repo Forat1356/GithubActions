@@ -3,7 +3,7 @@ on:
  push:
   branches: ["tom"]
 env:
-  DAY_OF_WEEK: Monday
+  DAY_OF_WEEK: "Monday"
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
