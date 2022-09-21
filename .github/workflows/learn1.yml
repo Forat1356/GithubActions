@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: check
-        if: env.DAY_OF_WEEK=="Moday"}}
+        if: env.DAY_OF_WEEK == "Moday"
         run: echo " Tes it is  $DAY_OF_WEEK"
       
