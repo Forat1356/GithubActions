@@ -3,7 +3,7 @@ on:
  push:
   branches: ["tom"]
 env:
-  DAY_OF_WEEK: Monday
+  DAY_OF_WEEK:  Monday
 
 jobs:
   greeting_job:
