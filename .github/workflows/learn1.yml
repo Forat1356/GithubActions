@@ -2,10 +2,12 @@ name: GitHub Actions Demo
 on: 
  push:
   branches: ["tom"]
+env:
+  DAY_OF_WEEK: Monday
 jobs:
   Explore-GitHub-Actions:
-    runs-on: windows-latest
+    runs-on: uubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: get-process
+      - run: echo " I am Thomas     $DAY_OF_WEEK"
       
