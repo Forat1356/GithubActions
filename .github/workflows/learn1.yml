@@ -6,7 +6,7 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron:  '30 5,17 * * *'
 env:
-  DAY: ${{github.event.push.branches.tom}}
+  DAY: monday
   secret: ${{secrets.secret1}}
 
 
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : echo "here is your day $DAY"
+        run : /home/runner/work/GithubActions/GithubActions/script1.sh
                
         
         
