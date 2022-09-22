@@ -4,7 +4,7 @@ on:
   branches: ["tom"]
 
 env:
-  DAY: "${{github.event.push.branches}}"
+  DAY: Tuesday  # "${{github.event.push.branches}}"
   secret: ${{secrets.secret1}}
 
 
