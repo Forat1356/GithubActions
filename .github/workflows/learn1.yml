@@ -13,12 +13,14 @@ env:
 jobs:
    
   greeting_job:
+    name: job1
     runs-on : ubuntu-latest
-    
+    env:
+     DAY: ${{jobs.greeting_job.name}}
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : /home/runner/work/_temp/script1.sh
+        run : echo "$DAY"
                
         
         
