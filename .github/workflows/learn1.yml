@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : /home/runner/work/GithubActions/GithubActions/script1.sh
+        run : /home/runner/work/_temp/script1.sh
                
         
         
