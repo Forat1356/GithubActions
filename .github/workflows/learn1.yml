@@ -5,12 +5,13 @@ on:
 env:
   DAY_OF_WEEK: lol222
   secret: ${{secrets.secret1}}
-permissions: 
-  read-all|write-all
+permissions: read-all|write-all
+
 jobs:
    
   greeting_job:
     runs-on : ubuntu-latest
+    permissions: read-all|write-all
     steps:
       - uses: actions/checkout@v3
       - name: script
