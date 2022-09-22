@@ -4,7 +4,7 @@ on:
   branches: ["tom"]
 
 env:
-  DAY_OF_WEEK: lol222
+  DAY: "${{github.event.push}}"
   secret: ${{secrets.secret1}}
 
 
@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : echo "${{github.event.push}}"
+        run : echo "here is your day $DAY"
                
         
         
