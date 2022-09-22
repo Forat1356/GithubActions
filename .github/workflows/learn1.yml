@@ -2,20 +2,7 @@ name: GitHub Actions Demo
 on: 
  push:
   branches: ["tom"]
-permissions: 
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  id-token: write
-  issues: write
-  discussions: write
-  packages: write
-  pages: write
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
+
 env:
   DAY_OF_WEEK: lol222
   secret: ${{secrets.secret1}}
@@ -29,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : script1.sh 
+        run : echo "${{github.event.push}}"
                
         
         
