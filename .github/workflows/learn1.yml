@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: script
-        run : ./script1.sh
+        run : -e {./script1.sh}
         
         
         
