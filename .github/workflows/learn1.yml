@@ -7,18 +7,14 @@ env:
   secret: ${{secrets.secret1}}
 
 jobs:
+   
   greeting_job:
-   strategy:
-    matrix:
-      os: [ubuntu-latest, windows-latest]
-   runs-on: ${{matrix.os}}
-   steps:
-      - name: windows
-        if: "${{matrix.os == 'windows-latest'}}"
-        run: write-host "my windows 22444444 test is $env:DAY_OF_WEEK"
-      - name: linux
-        if: "${{matrix.os == 'ubuntu-latest'}}"
-        run: echo "my linuxxxxxxxxx 22444444 test is $DAY_OF_WEEK"
+    runs-on : ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: script
+        run : ./script1.sh
+        
         
         
       
