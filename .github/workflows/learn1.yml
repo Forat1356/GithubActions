@@ -16,7 +16,7 @@ jobs:
     name: job1
     runs-on : ubuntu-latest
     env:
-     DAY: ${{jobs.greeting_job.name}}
+     DAY: jobs.greeting_job.name
     steps:
       - uses: actions/checkout@v3
       - name: script
