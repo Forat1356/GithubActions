@@ -12,10 +12,12 @@ jobs:
       os: [ubuntu-latest, windows-latest]
    runs-on: ${{matrix.os}}
    steps:
-     - run : echo " LINUX"
-       shell: bash
-     - run : write-host " Windows"
-       shell: pwsh
+     - if: "${{matrix.os}} == 'ubuntu-latest'}}"
+       run : echo " LINUX"
+     
+     - if: "${{matrix.os}} == 'windows-latest'}}"
+       run : write-host " Windows"
+        
    
         
         
