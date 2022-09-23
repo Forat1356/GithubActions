@@ -13,7 +13,9 @@ jobs:
    runs-on: ${{matrix.os}}
    steps:
      - run : echo " LINUX"
+       shell: bash
      - run : write-host " Windows"
+       shell: pwsh
    
         
         
