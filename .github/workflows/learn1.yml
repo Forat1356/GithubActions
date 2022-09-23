@@ -5,19 +5,16 @@ on:
 
 
 jobs:
-   
   job1:
-    name: job1111
-    needs: job2
-    runs-on : ubuntu-latest
-    steps:
-     - run : echo " job1"
-      
-  job2:
-   name: job22222
-   runs-on : ubuntu-latest
+   name: job1111
+   strategy:
+    matrix:
+      os: [ubuntu-latest, windows-latest]
+   runs-on: ${{matrix.os}}
    steps:
-     - run :  echo "job2"
+     - run : echo " LINUX"
+     - run : write-host " Windows"
+   
         
         
         
