@@ -17,7 +17,7 @@ jobs:
         shell:bash
      
      - if: "${{matrix.os}} == 'windows-latest'}}"
-       run : write-host " Windows"
+       run :  Write-Host " Windows"
         shell:pwsh
         
    
