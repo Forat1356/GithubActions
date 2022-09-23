@@ -1,24 +1,22 @@
-name: GitHub Actions Demo
-on: 
- push:
-  branches: ["tom"]
-
-
+name: CI
+on:
+  push:
+    branches: [ main ]
 jobs:
-  job1:
-   name: job1111
-   strategy:
-    matrix:
-      os: [ubuntu-latest, windows-latest]
-   runs-on: ${{matrix.os}}
-   steps:
-     - if: "${{matrix.os}} == 'ubuntu-latest'}}"
-       run : echo " LINUX"
-        shell:bash
-     
-     - if: "${{matrix.os}} == 'windows-latest'}}"
-       run :  Write-Host " Windows"
-        shell:pwsh
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14.16
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+      options: --cpus 1
+    steps:
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
         
    
         
