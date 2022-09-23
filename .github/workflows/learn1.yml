@@ -19,6 +19,8 @@ jobs:
      DAY: jobs.greeting_job.name
     steps:
       - uses: actions/checkout@v3
+      - name: Set selected color
+        run: echo '::set-output name=SELECTED_COLOR::green'
       - name: script
         run : echo "$DAY"
                
