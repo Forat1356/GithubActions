@@ -8,16 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      output1: ${{ steps.step1.outputs.lol1 }}
+      output1: "Hello output1"
     steps:
       - id: step1
         run: echo "::set-output name=lol1::hello thomas"
      
   job2:
     runs-on: ubuntu-latest
-    needs: job1
     steps:
-      - run: echo ${{needs.job1.outputs.output1}}  
+      - run: echo ${{job1.outputs.output1}}  
         
    
         
