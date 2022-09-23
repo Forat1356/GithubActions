@@ -17,7 +17,7 @@ jobs:
     
       - name: script
         env: 
-         DAY: jobs.greeting_job.name
+         DAY: ${{jobs.greeting_job.name}}
         run : echo "$DAY"
                
         
