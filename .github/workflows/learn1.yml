@@ -16,7 +16,7 @@ jobs:
       options: --cpus 1
     steps:
       - name: Check for dockerenv file
-        run: ls 
+        run: echo $NODE_ENV
         
    
         
