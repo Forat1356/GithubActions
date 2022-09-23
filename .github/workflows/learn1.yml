@@ -2,12 +2,6 @@ name: GitHub Actions Demo
 on: 
  push:
   branches: ["tom"]
- schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '30 5,17 * * *'
-env:
-  DAY: monday
-  secret: ${{secrets.secret1}}
 
 
 jobs:
@@ -19,9 +13,11 @@ jobs:
      DAY: jobs.greeting_job.name
     steps:
       - uses: actions/checkout@v3
-      - name: Set selected color
-        run: echo '::set-output name=SELECTED_COLOR::green'
+      
+    
       - name: script
+        env: 
+         DAY: jobs.greeting_job.name
         run : echo "$DAY"
                
         
