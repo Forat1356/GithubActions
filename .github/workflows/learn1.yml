@@ -11,7 +11,7 @@ jobs:
       output1: ${{ steps.step1.outputs.lol1 }}
     steps:
       - id: step1
-        run: echo "::set-output name=lol1::hello1 thomas1, name=lol2::hello2 thomas2"
+        run: echo "::set-output name=lol1::hello thomas"
      
   job2:
     runs-on: ubuntu-latest
