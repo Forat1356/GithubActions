@@ -6,20 +6,18 @@ on:
 
 jobs:
    
-  greeting_job:
-    name: job1
+  job1:
+    name: job1111
+    needs: job2
     runs-on : ubuntu-latest
-    env:
-     DAY: jobs.greeting_job.name
     steps:
-      - uses: actions/checkout@v3
+     - run : echo " job1"
       
-    
-      - name: script
-        env: 
-         DAY: ${{jobs.greeting_job.name}}
-        run : echo "$DAY"
-               
+  job2:
+   name: job22222
+   runs-on : ubuntu-latest
+   steps:
+     - run :  echo "job2"
         
         
         
