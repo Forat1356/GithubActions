@@ -1,5 +1,5 @@
 name: manual
-on: push
+on:   push
 
 jobs:
  job1: 
